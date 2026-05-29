@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 270 90% 65%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 55%;
+    --accent: 300 80% 60%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 240 8% 18%;
+    --input: 240 8% 18%;
+    --ring: 270 90% 65%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .neon-text-purple {
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.4);
+  }
+  .neon-text-pink {
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 30px rgba(236, 72, 153, 0.4);
+  }
+  .neon-text-cyan {
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 30px rgba(6, 182, 212, 0.4);
+  }
+  .neon-border {
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3), inset 0 0 15px rgba(168, 85, 247, 0.05);
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #a855f7, #ec4899, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0d0d0f; }
+::-webkit-scrollbar-thumb { background: #a855f7; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #ec4899; }
